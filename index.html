@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha do Tempo com Modal</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Menu Superior Fixo -->
+    <nav>
+        <ul>
+            <li><a href="#section1">Início</a></li>
+            <li><a href="#section2">Sobre</a></li>
+            <li><a href="#section3">Projetos</a></li>
+            <li><a href="#section4">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Título Central -->
+    <header>
+        <h1>Linha do Tempo de Eventos</h1>
+    </header>
+
+    <!-- Linha do Tempo -->
+    <div class="timeline">
+        <div class="timeline-item left">
+            <div class="timeline-icon" onclick="openModal('modal1')">📅</div>
+            <div class="content">
+            <h3>O QUE È VIOLÊNCIA</h3>
+            
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="timeline-icon" onclick="openModal('modal2')">📅</div>
+            <div class="content">
+                <h3>TIPOS DE VIOLÊNCIA</h3>
+                
+            </div>
+        </div>
+
+        <div class="timeline-item left">
+            <div class="timeline-icon" onclick="openModal('modal3')">📅</div>
+            <div class="content">
+                <h3>COMBATE</h3>
+                
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="timeline-icon" onclick="openModal('modal4')">📅</div>
+            <div class="content">
+                <h3>Evento 4</h3>
+                <p>Descrição do evento 4, números: 1121.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé Fixo -->
+    <footer>
+        <p>&copy; 2024 Minha Linha do Tempo</p>
+    </footer>
+
+    <!-- Modal 1 Local de Informações sobre-->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Detalhes do Evento 1</h2>
+            <img src="https://via.placeholder.com/400" alt="Imagem do Evento 1">
+            <p>Conteúdo detalhado sobre o evento 1.</p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Detalhes do Evento 2</h2>
+            <img src="https://via.placeholder.com/400" alt="Imagem do Evento 2">
+            <p>Conteúdo detalhado sobre o evento 2.</p>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Detalhes do Evento 3</h2>
+            <img src="https://via.placeholder.com/400" alt="Imagem do Evento 3">
+            <p>Conteúdo detalhado sobre o evento 3.</p>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Detalhes do Evento 4</h2>
+            <img src="https://via.placeholder.com/400" alt="Imagem do Evento 4">
+            <p>Conteúdo detalhado sobre o evento 4.</p>
+        </div>
+    </div>
+
+
+
+    <!--Não precisa mexer aqui...-->
+    <script>
+        // Função para abrir o modal e desabilitar o scroll da página principal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden"; // Desabilita o scroll da página principal
+        }
+
+        // Função para fechar o modal e reabilitar o scroll da página principal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto"; // Reabilita o scroll da página principal
+        }
+    </script>
+
+</body>
+</html>
